@@ -1,0 +1,65 @@
+<html>
+<head>
+<title>signup form</title>
+<script type="text/javascript">/**/
+function validate()
+{
+var First Name=document.getElementById("fst");
+var Last Name=document.getElementById("lst");
+var Email Address=document.getElementById("ed");
+var Phone Number=document.getElementById("ph");
+var Password=document.getElementById("pss");
+var confirm password=document.getElementById("cpss");
+if(First Name.value==""||last Name.value==""||Email address.value==""||Phone Number.value==""||Password.value==""||confirm password.value=="")
+{
+alert("not acceptable");
+return false;
+}
+else
+{
+ture;
+}
+}
+</script>
+<style>
+table
+{
+color:white;
+}
+body
+{
+background-color:green;
+}
+#but
+{
+background-color:black;
+color:white;
+height:30px;
+width:90px;
+}
+</style>
+</head>
+<body>
+<br><br><br><br><br><br>
+<form onsubmit="return validate()" action="access.html">
+<table align="center">
+<tr> 
+<td><h2>create account</h2></td></tr>
+<table align="center"cellspacing="10">
+<tr>
+<td>First Name<td><input id="fst" type="text" placeholder="First Name"></td></tr>
+<tr>
+<td>Last Name<td><input id="lst" type="text" placeholder="Last Name"></td></tr>
+<tr>
+<td>Email Address<td><input id="ed" type="email" placeholder="Email Address"></td></tr>
+<tr>
+<td>Phone number<td><input id="ph" type="text" placeholder="Phone Number"></td></tr>
+<tr>
+<td>password<td><input id="pss" type="text"placeholder="Password"></td></tr>
+<tr>
+<td>confirm password<td><input id="cpss" type="text"placeholder="confirm password"></td></tr>
+<tr>
+<td>gender<td><input type="radio" name="rad" required>Male<td><input type="radio" name="rad" required>Female</td></tr>
+<tr><td align="center" colspan="2"><a href=access.html><button type="submit" id="but">click me</button></a></td></tr>
+</body>
+</html>
