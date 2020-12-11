@@ -1,0 +1,18 @@
+char data=0;  //variable for storing recevied data
+void setup()
+{
+serial begin(9600);   //sets the data rate in bits per second for serial data transmission
+pin mode(13,output);  //sets digital pin 13 as output pin
+}
+void loop()
+{
+if (serial.available()>0)  //send data only when you receive data
+{
+data=serial.read();  //read the coming data and store it into variable data
+serial.print("\n");  //new lines
+if(data==1)   //checks if the data is equal to 1
+digitalwrite(13,HIGH); // if value is 1 the buzzer is turned on
+else if(data==0) //checks whether value of databis equal to 0
+digitalwrite(13,low);  // if value is 0 then buzzer doesnt turn on.
+}
+}
